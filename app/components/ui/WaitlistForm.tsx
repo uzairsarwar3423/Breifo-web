@@ -41,20 +41,20 @@ export default function WaitlistForm({ onSuccess }: { onSuccess?: () => void }) 
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md max-md:mx-auto">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:gap-4 max-w-xs sm:max-w-md max-md:mx-auto">
       <div className="flex gap-2">
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
-          className="flex-1 px-4 py-3 rounded-md border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="flex-1 px-3 py-2 sm:px-4 sm:py-3 rounded-md border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           required
         />
         <button
           type="submit"
           disabled={isSubmitting}
-          className="px-6 py-3 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white transition disabled:opacity-50"
+          className="px-4 py-2 sm:px-6 sm:py-3 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white transition disabled:opacity-50"
         >
           {isSubmitting ? 'Joining...' : 'Join Waitlist'}
         </button>
